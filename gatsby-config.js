@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    desc: 'New ScriptHub Entry',
+    title: 'DevOpSec',
+    desc: 'DevOps & Security Services',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

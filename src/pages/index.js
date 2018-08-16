@@ -1,22 +1,28 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+// import Img from 'gatsby-image'
+import { PageWrapper, PageContainer } from '../components/StyledComponents'
+import HipsterPic from './hipster-in-suit.jpg'
 
 const IndexPage = ({ data }) => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-    {}
-  </div>
+  <PageWrapper
+    style={{
+      backgroundImage: `url(${HipsterPic})`,
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }}
+  >
+
+  </PageWrapper>
 )
+
 export const query = graphql`
   query BannerImage{
-    allImageSharp {
-      edges {
-        node {
-          id
-        }
+    background: imageSharp(id: {regex: "/images/sitting-hipster.jpg/"}) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
       }
     }
   }

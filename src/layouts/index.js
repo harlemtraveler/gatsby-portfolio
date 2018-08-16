@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.css'
+import Img from 'gatsby-image'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -13,15 +14,12 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <Header
+      data={data}
+      location={location}
+      siteTitle={data.site.siteMetadata.title}
+    />
+    <div style={{}}>
       {children()}
     </div>
   </div>
@@ -41,4 +39,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

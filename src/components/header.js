@@ -1,37 +1,36 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Img from 'gatsby-image'
-import hipsterImg from '../images/sittingHipsterShapes.jpg'
+import styled from 'styled-components'
+import { HeaderWrapper, HeaderContainer, MainNav } from '../components/StyledComponents'
+import Logo from '../components/devopsec-logo.png'
 
-console.log(hipsterImg);
+// const logo = '/src/pages/devopsec-logo.png'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+const Header = ({ data }) => (
+  <HeaderWrapper>
+    <HeaderContainer>
+
+      <MainNav>
+        <ul>
+          <li>
+            <Link to={'/'}>
+              <img src={{logo}} />
+            </Link>
+          </li>
+          <li>
+            <Link to={'/work/'}>Work</Link>
+          </li>
+          {/* <li>
+            <Link to={'/projects/'}>Projects</Link>
+          </li> */}
+          <li>
+            <Link to={'/page-2/'}>Page 2</Link>
+          </li>
+        </ul>
+      </MainNav>
+
+    </HeaderContainer>
+  </HeaderWrapper>
 )
 
-export default Header
+export default Header;
