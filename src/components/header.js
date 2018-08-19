@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { HeaderWrapper, HeaderContainer, MainNav } from '../components/StyledComponents'
-import Logo from '../components/devopsec-logo.png'
+// import Logo from '../components/devopsec-logo.png'
 
 // const logo = '/src/pages/devopsec-logo.png'
 
@@ -14,7 +14,8 @@ const Header = ({ data }) => (
         <ul>
           <li>
             <Link to={'/'}>
-              <img src={{logo}} />
+              Home
+              {/* <img src={{logo}} /> */}
             </Link>
           </li>
           <li>
