@@ -8,7 +8,7 @@ import HipsterPic from './hipster-in-suit.jpg'
 const IndexPage = ({ data }) => (
   <PageWrapper
     style={{
-      backgroundImage: `url(${HipsterPic})`,
+      backgroundImage: `{data.home-background-flat.sizes}`,
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query BannerImage{
-    background: imageSharp(id: {regex: "/images/sitting-hipster.jpg/"}) {
+    background: imageSharp(id: {regex: "/images/home-background-flat.jpg/"}) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes
       }

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'DevOpSec',
-    desc: 'DevOps & Security Services',
+    title: 'Timothy Keaveny',
+    desc: 'DevOps, Security, and Full Stack Web Engineer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
